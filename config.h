@@ -12,11 +12,12 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_black[]		= "#000000";
+static const char col_cyan[]        = "#42b3f5";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_black, col_cyan,  col_cyan  },
 };
 static const char *const autostart[] = {
 	"feh", "--bg-scale","/home/martin/backgrounda.jpg", NULL,
@@ -48,7 +49,7 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const char *scrotcmd[]  = { "scrot", "/home/martin/Pictures/screenshot.png", NULL };
 static const char *scrotfocusedcmd[]  = { "scrot", "--focused", NULL };
 static const char *shutdowncmd[] = { "shutdown", "now", NULL };
-static const char *chromium[] = { "chromium", NULL };
+static const char *firefox[] = { "firefox", NULL };
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -129,7 +130,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ControlMask,			XK_c,	   spawn,		   {.v = chromium} },
+	{ MODKEY|ControlMask,			XK_c,	   spawn,		   {.v = firefox} },
 	{ MODKEY|ControlMask,			XK_v,	   spawn,		   {.v = veronika} },
 	{ MODKEY|ControlMask,			XK_s,	   spawn,		   {.v = killmplayer} },
 };
